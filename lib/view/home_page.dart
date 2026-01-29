@@ -4,6 +4,8 @@ import 'package:t4_1/view/components/pedido_card.dart';
 import 'package:t4_1/view/create_pedido_page.dart';
 import 'package:t4_1/viewmodel/pedido_viewmodel.dart';
 
+/// Página principal de la aplicación donde se muestran
+/// las mesas y el botón de creación de mesas.
 class HomePage extends StatefulWidget {
   final PedidoViewmodel pedidoViewmodel;
 
@@ -13,6 +15,8 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+/// Estado de la página principal. Muestra las mesas guardadas en el [PedidoViewmodel]
+/// y permite crear nuevos pedidos
 class _HomePageState extends State<HomePage>{
 
   late PedidoViewmodel pedidoViewmodel;
