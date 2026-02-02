@@ -38,9 +38,13 @@ class _CreatePedidoPageState extends State<CreatePedidoPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Mesa / nombre"),
+            // Text("Mesa / nombre"),
             TextField(
               onChanged: (value) => table = value,
+              decoration: InputDecoration(
+                labelText: "Nombre de la mesa",
+                helperText: "Introduce en nombre de la mesa o uno personalizado"
+              ),
             ),
             SizedBox(height: 20,),
             ElevatedButton(
@@ -102,6 +106,13 @@ class _CreatePedidoPageState extends State<CreatePedidoPage> {
                     });
 
                     Navigator.pop(context, Pedido(table: table, trimedProducts, productsNumber, totalPrice));
+
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text("Pedido creado"),
+                        duration: Duration(seconds: 3),
+                      )
+                    );
                   }, 
                   child: Text("Guardar")
                 ),
