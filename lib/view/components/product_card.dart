@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:t4_1/model/product.dart';
 
+/// Componente que representa un producto a escoger
 class ProductCard extends StatefulWidget {
   
   final Product product;
@@ -11,11 +12,13 @@ class ProductCard extends StatefulWidget {
 
   const ProductCard({super.key, required this.product, this.initialAmount = 0, this.onChanged});
 
+  /// Crea un [_ProductCardState] para este Widget
   @override
   State<ProductCard> createState() => _ProductCardState();
 
 }
 
+/// Estado de [ProductCard]. Guarda la cantidad seleccionada del producto
 class _ProductCardState extends State<ProductCard> {
 
   late final Product product;

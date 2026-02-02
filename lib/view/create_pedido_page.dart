@@ -4,14 +4,21 @@ import 'package:t4_1/model/product.dart';
 import 'package:t4_1/view/details_page.dart';
 import 'package:t4_1/view/products_select_page.dart';
 
+/// Página de creación del pedido. Contiene un campo para introducir el nombre de la mesa, 
+/// un botón que navea a una vista para elegir los productos, un resumen rápido del número de 
+/// productos escogidos y el precio de ellos y un botón que lleva al resumen general del pedido
 class CreatePedidoPage extends StatefulWidget{
 
   const CreatePedidoPage({super.key});
 
+  /// Crea un [_CreatePedidoPageState] para este Widget
   @override
   State<CreatePedidoPage> createState() => _CreatePedidoPageState();
 }
 
+/// Estado de [CreatePedidoPage]. Guarda el estado de los productos escogidos,
+/// el número de productos, el nombre de la mesa y el precio total y actualiza la ui
+/// conforme a estos datos
 class _CreatePedidoPageState extends State<CreatePedidoPage> {
 
   Map<Product, int> products = {};
@@ -19,6 +26,9 @@ class _CreatePedidoPageState extends State<CreatePedidoPage> {
   String table = "";
   double totalPrice = 0.0;
 
+  /// Construye la interfaz gráfica. Contiene dos botónes que navegan a las vistas 
+  /// [ProductsSelectPage] y [DetailsPage] además de dos botónes para guardar el
+  /// pedido o cancelarlo
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,7 @@
 
 import 'package:t4_1/model/product.dart';
 
+/// Clase que representa un pedido
 class Pedido {
   
   final String table;

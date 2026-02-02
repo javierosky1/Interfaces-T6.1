@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Componente que representa un pedido, mostrando un resumen rápido de este
 class PedidoCard extends StatelessWidget {
   final String table;
   final int numProducts;
@@ -12,6 +13,7 @@ class PedidoCard extends StatelessWidget {
     required this.totalPrice,
   });
 
+  /// Construye el componente
   @override
   Widget build(BuildContext context) {
     return Card(

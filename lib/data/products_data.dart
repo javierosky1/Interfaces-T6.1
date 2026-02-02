@@ -1,5 +1,6 @@
 import 'package:t4_1/model/product.dart';
 
+/// Clase que contiene una lista de [Product]
 class ProductsData {
 
   static List<Product> products = [

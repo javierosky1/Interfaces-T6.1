@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:t4_1/model/pedido.dart';
 
+/// Página de detalles de un pedido.
 class DetailsPage extends StatelessWidget {
 
   static const routeName = "/details"; 
 
   const DetailsPage({super.key});
 
+  /// Construye la vista. Obtiene el pedido pasado por la ruta nombrada y 
+  /// muestra sus datos y número de productos seleccionados
   @override
   Widget build(BuildContext context) {
 

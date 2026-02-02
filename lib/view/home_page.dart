@@ -11,22 +11,25 @@ class HomePage extends StatefulWidget {
 
   const HomePage({super.key, required this.pedidoViewmodel});
 
+  /// Crea un [_HomePageState] para este Widget
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
-/// Estado de la página principal. Muestra las mesas guardadas en el [PedidoViewmodel]
+/// Estado de [HomePage]. Muestra las mesas guardadas en el [PedidoViewmodel]
 /// y permite crear nuevos pedidos
 class _HomePageState extends State<HomePage>{
 
   late PedidoViewmodel pedidoViewmodel;
 
+  /// Se ejecuta al iniciar el estado. Obtiene el viewmodel del [HomePage] que crea el estado
   @override
   void initState() {
     super.initState();
     pedidoViewmodel = widget.pedidoViewmodel;
   }
 
+  /// Crea la interfaz gráfica donde se muestran los pedidos y un botón que navegará a la vista [CreatePedidoPage]
   @override
   Widget build(BuildContext context) {
     return Scaffold(
